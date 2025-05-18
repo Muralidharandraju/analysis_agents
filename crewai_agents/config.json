@@ -1,0 +1,6 @@
+{"model_name":"gpt-4o-mini",
+"log_file_save_path": "./loginformation/"
+,"log_file_name": "log.txt",
+"agent_name": "agents.yml",
+"task_name": "task.yml"
+}
