@@ -1,0 +1,19 @@
+# CrewAI Data Analysis Agents
+
+This project provides a backend and frontend solution for performing data analysis on CSV files using a team of specialized AI agents powered by CrewAI.Users can upload CSV files and interact with the system via a chat interface to ask questions and receive data-driven insights.
+
+## Features
+
+- **File Upload**: Supports uploading CSV files through a Streamlit-based user interface.
+- **AI-Powered Data Analysis**: Utilizes CrewAI agents to process and analyze data from the uploaded CSV files.
+- **Chat Interface**: Allows users to ask natural language questions to query the data.
+- **Configurable Agents**: Agent roles, goals, and backstories are defined in `agents.yml`.
+- **Flexible LLM Configuration**: Supports different LLMs, configurable via `config.json` (e.g., OpenAI models, local Ollama models).
+- **FastAPI Backend**: Robust backend serving the analysis capabilities.
+- **Streamlit Frontend**: Interactive and user-friendly web interface.
+
+In this repo we have solution for analysis .csv files using CrewAI frame work and Gemma2 model. 
+below are few points describe the most.
+1. Fast API used for communicating with the crewAI framework
+2. Streamlit app for UI experience.
+3. used Gemma 2 from Ollama for processing. 
