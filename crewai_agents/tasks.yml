@@ -1,0 +1,25 @@
+
+- name: Retrieve Data
+  description: >
+    User query: '{question}'.
+    Retrieve the necessary data from the available CSV file to answer this question.
+  expected_output: A text block containing the raw data snippets, summaries, or relevant information extracted from the CSV file needed to answer the user's query.
+  agent_name: Data Retriever Specialist
+
+- name: Analyze Data
+  description: >
+    Analyze the data provided in the context (output of the retrieval task) to address the original user query: '{question}'.
+    Perform calculations, identify key trends, patterns, highs, lows, or other relevant insights based *only* on the provided data.
+    Structure your findings clearly. If the data is insufficient, state what's missing or request clarification (delegation).
+  expected_output: A structured analysis report containing key findings, calculations, and insights derived *solely* from the input data. Clearly state any limitations.
+  agent_name: Senior Data Analyst
+  context_task: Retrieve Data
+
+- name: Write Report
+  description: >
+    Compile the structured analysis provided in the context into a final, well-formatted report in Markdown.
+    Ensure the report directly answers the original user query: '{question}' based on the analysis.
+    The report should be clear, concise, and easy to read.
+  expected_output: A final, polished report in Markdown format summarizing the analysis and answering the user query.
+  agent_name: Technical Report Writer
+  context_task: Analyze Data

@@ -2,5 +2,5 @@
 "log_file_save_path": "./loginformation/"
 ,"log_file_name": "log.txt",
 "agent_name": "agents.yml",
-"task_name": "task.yml"
+"task_name": "tasks.yml"
 }
