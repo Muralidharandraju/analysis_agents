@@ -1,0 +1,8 @@
+streamlit
+requests
+fastapi
+pydantic
+crewai
+python-dotenv
+pytest
+PyYAML
