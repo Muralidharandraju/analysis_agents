@@ -9,13 +9,11 @@ import json
 # from crewai.knowledge.knowledge_config import KnowledgeConfig
 
 # knowledge_config = KnowledgeConfig(results_limit=10, score_threshold=0.5)
-
-
 load_dotenv()
 
-# Load config and setup LLM
 try:
-    with open('config.json') as f:
+    config_path = os.path.join(os.path.dirname(__file__), 'config.json')
+    with open(config_path) as f:
         config = json.load(f)
 except FileNotFoundError:
     raise FileNotFoundError("config.json not found")
@@ -110,4 +108,3 @@ def create_data_analysis_crew(knowledge_folder: str):
         verbose=True
     )
     return data_analysis_crew
-
