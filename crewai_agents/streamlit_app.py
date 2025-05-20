@@ -80,14 +80,10 @@ with st.sidebar:
                 if upload_response:
                     st.session_state.session_id = upload_response.get("session_id")
                     # Store names of successfully processed files if backend provides them
-                    # For now, just use the names from the uploader
                     st.session_state.uploaded_file_names = [f.name for f in uploaded_files]
                     st.success(upload_response.get("message", "Files processed successfully!"))
                     if st.session_state.session_id:
                         st.info(f"Session ID: {st.session_state.session_id}")
-                    # Clear the file uploader after successful processing to prevent re-upload on rerun
-                    # This is a bit tricky with Streamlit's rerun behavior.
-                    # A common pattern is to use the button to trigger processing and then rely on session_state.
                 else:
                     st.error("File processing failed. Check error messages above.")
 

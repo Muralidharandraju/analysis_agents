@@ -13,4 +13,4 @@
 *.DS_Store
 *.coverage
 *.env
-*.DS_Store
+*.__pycache__
